@@ -198,6 +198,15 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 ```
 
+#### AMD Vulkan Driver
+Not directly related to VFIO but to achieve optimal performance on the host if it uses an AMD GPU install the AMD Vulkan drivers.
+
+```
+sudo wget -qO - http://repo.radeon.com/amdvlk/apt/debian/amdvlk.gpg.key | sudo apt-key add -
+sudo sh -c 'echo deb [arch=amd64] http://repo.radeon.com/amdvlk/apt/debian/ bionic main > /etc/apt/sources.list.d/amdvlk.list'
+sudo apt update
+sudo apt-get install amdvlk
+```
 
 #### Kernel Update
 Install mainline for Ubuntu kernel updates:
