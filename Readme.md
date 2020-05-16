@@ -199,7 +199,7 @@ sudo apt-get dist-upgrade
 ```
 
 #### AMD Vulkan Driver
-Not directly related to VFIO but to achieve optimal performance on the host if it uses an AMD GPU install the AMD Vulkan drivers.
+Not directly related to VFIO but to achieve optimal performance on the host if it uses an AMD GPU install the AMD Vulkan drivers. Ubuntu comes with the Open Source `mesa-vulkan-drivers` which offer the same if not better performance than the AMD driver. To optionally install the AMD Vulkan driver perform the following:
 
 ```
 sudo wget -qO - http://repo.radeon.com/amdvlk/apt/debian/amdvlk.gpg.key | sudo apt-key add -
