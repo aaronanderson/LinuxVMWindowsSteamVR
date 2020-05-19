@@ -545,7 +545,7 @@ The best solution at this time is to setup a [Samba Server](https://www.iodocs.c
 
 This only works if a Spice client (Video QXL) is used.
 
-Verify a  com.redhat.spice.0 Spice change is configured on the guest.
+Verify a com.redhat.spice.0 Spice channel is configured on the guest.
 
 Install [spice guest tools](https://www.spice-space.org/download.html) in the Windows guest.
 
