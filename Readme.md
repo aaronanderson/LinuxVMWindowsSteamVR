@@ -22,6 +22,10 @@ Intuitively, passing a GPU through from the host to a guest means it will no lon
 
 It seems strange but one needs to use a KVM with a single computer if the USB controller the mouse and keyboard are plugged into is passed to a guest VM. I already had a KVM for switching inputs between my desktop computer and some work laptops so this was not an issue for me.
 
+Configuring [evdev](https://passthroughpo.st/using-evdev-passthrough-seamless-vm-input/) is an alternative to using a KVM switch although if one is passing a USB controller it would make more sense to achieve a native mouse and keyboard experience. For example I am using a Razer mouse and keyboard which has additional Windows software available for it.
+
+
+
 ### Dual boot or Virtualization?
 Given the PCI pass through hardware requirements above and the known issues listed below virtualization may not be the best solution in all circumstances. [Dual booting](https://en.wikipedia.org/wiki/Multi-booting) using a [UEFI boot manager](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-and-uefi) or software boot manager like [Grub](https://itsfoss.com/grub-customizer-ubuntu/) one can run multiple operating systems on the same hardware and achieve optimal performance. On the other hand virtualization saves time switching back and forth between OS's, data can be moved between the running systems, and the guest performance is close to bare metal. Additionally moving Windows VM machines between different hosts becomes possible although the Microsoft [one instance](https://www.microsoft.com/en-us/Useterms/Retail/Windows/10/UseTerms_Retail_Windows_10_English.htm) licensing policy should be adhered to.
 
@@ -483,9 +487,9 @@ Install [Steam](https://store.steampowered.com).
 
 * From the Home environment observe the performance. It should be near native. Open the [Half-Life: Alyx Russell's Lab](https://uploadvr.com/half-life-alyx-steamvr-home-download/) environment and observe the performance.
 
-## Firefox WebXR
+* Note that SteamVR [does not turn the Lighthouse Base Stations Off in Linux](https://github.com/ValveSoftware/SteamVR-for-Linux/issues/320). Be sure to unplug them after you are finished playing in VR.
 
-I was not able to get WebXR on Chrome working with SteamVR yet. This didn't work in the dual boot native Windows either so it is not related to virtualization.
+## Firefox WebXR
 
 * [Install Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
@@ -499,9 +503,25 @@ I was not able to get WebXR on Chrome working with SteamVR yet. This didn't work
 
 * Navigate and enjoy!!!
 
+
+## Chrome WebXR
+
+* [Install Chrome](https://www.google.com/chrome/)
+
+* Start SteamVR
+
+* In Chrome open the URL chrome://flags
+
+* Set XR device sandboxing to disabled
+
+* Set Force WebXr Runtime to SteamVR (OpenVR)
+
+* Open the Hello WebXR! URL above, click allow, Enter VR, and put the HMD on.
+
 ## Host and Guest Interaction
 
 Virtualization does not have much of an advantage over dual booting if the host and guest are not utilized at the same time. There are a few ways for the guest to access host services.
+
 
 ### Networking
 
