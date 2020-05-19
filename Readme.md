@@ -69,10 +69,10 @@ Here are the hardware components for the Linux host OS:
 * **RAM** - Corsair Vengeance 32GB DDR4-3200
 * **Storage** - Inland Performance M.2 PCI3 4.0 1TB SSD
 * **Power Supply** - MAINGEAR IGNITION 1000W
-* **PCI Expansion Card USB Controller** - FebSmart PCI Express Slot 4-Port USB 3.0 Controller
+* **PCI Expansion Card USB Controller** - FebSmart PCI Express Slot 4-Port USB 3.0 Controller (slot PCIE3)
 * **KVM** - UGREEN USB 2.0 switch box hub (USB only, no video)
-* **Host GPU** - AMD MSI Radeon RX 480
-* **Pass through GPU** - AMD Saphire Radeon RX Vega 56
+* **Host GPU** - AMD MSI Radeon RX 480 (slot PCIE4)
+* **Pass through GPU** - AMD Saphire Radeon RX Vega 56 (slot PCIE1)
 * **Dual Boot SSD** - Old Samsung EVO 860 256GB SATA SSD
 * **Monitors** -  Two LG 32UK50T
 * **VR Headset** -  Valve Index
